@@ -1,5 +1,6 @@
 import os
 import uuid
+import socket
 from os.path import expanduser
 
 version = "1.2"
