@@ -1,3 +1,7 @@
+import os
+import uuid
+from os.path import expanduser
+
 version = "1.2"
 os.system("title Verio Screensharing Assistant %s" %version)
 os.system("color 0f")
