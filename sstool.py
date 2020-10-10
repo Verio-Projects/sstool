@@ -227,7 +227,7 @@ def creds():
     print("")
     print("")
     print("                                              Made by splars#1252 with <3")
-    print("                                                    Credits to Joey")
+    print("                                                    Credits to Mvk#0349")
     print("")
     print("                                              https://www.youtube.com/splars")
     print("                                              https://namemc.com/profile/Splars")
