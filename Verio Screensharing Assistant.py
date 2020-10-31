@@ -1,11 +1,13 @@
 import os
 import uuid
 import socket
+import time
 from os.path import expanduser
 
-version = "1.2"
-os.system("title Verio Screensharing Assistant %s" %version)
-os.system("color 0f")
+version = "1.3"
+cls = lambda: os.system("cls" if os.name == "nt" else "clear")
+os.system("title Verio Screensharing Assistant %s" %version if os.name == "nt" else "pass")
+os.system("color 03" if os.name == "nt" else "pass")
 
 nickname = socket.gethostname()
 hwid = str(uuid.uuid1(uuid.getnode(), 0))[24:]
@@ -23,50 +25,37 @@ def logo():
     print("                                                                                                                   ")
 
 
-def cls():
-    os.system("cls" if os.name == "nt" else "clear")
-
-
 def menu():
     cls()
     logo()
 
-    print("")
-    print("")
-    print("")
+    print("\n\n")
     print("                                              [ 1 ] Scanner")
     print("                                              [ 2 ] Tools")
     print("                                              [ 3 ] OS Information")
     print("                                              [ C ] Copyright")
-    print("                                              [ V ] About")
-    print("")
-    print("")
-    print("")
-    print("")
-    print("")
-    print("")
-    choose = input(">> ").lower()
-    if not choose:
+    print("                                              [ V ] About\n\n\n\n\n\n")
+    choice = input(">> ").lower()
+    if not choice:
         menu()
 
-    if choose == "1":
+    if choice == "1":
         scanner()
 
-    elif choose == "2":
+    elif choice == "2":
         tools()
 
-    elif choose == "3":
+    elif choice == "3":
         info()
 
-    elif choose == "c":
+    elif choice == "c":
         cc()
 
-    elif choose == "v":
+    elif choice == "v":
         creds()
 
     else:
-        print("")
-        print("Please make a valid selection.")
+        print("\nPlease make a valid selection.")
         os.system("timeout 2 >nul 2>&1")
         menu()
 
@@ -75,20 +64,11 @@ def scanner():
     cls()
     logo()
 
-    print("")
-    print("")
-    print("")
+    print("\n\n")
     print("                                              [ 1 ] .exe Scanner")
     print("                                              [ 2 ] .jar Scanner")
-    print("")
-    print("")
-    print("")
-    print("")
-    print("")
-    print("")
-    print("")
-    print("                                                        [ x ]")
-    print("")
+    print("\n\n\n\n\n\n")
+    print("                                                        [ x ]\n")
 
     choose = input(">> ").lower()
     if not choose:
@@ -97,16 +77,14 @@ def scanner():
     if choose == "1":
         cls()
         os.system('powershell -Command "Get-Childitem -path $Directory -Recurse -Include *.exe')
-        print("")
-        print("")
+        print("\n")
         os.system("timeout -1 >nul 2>&1")
         scanner()
 
     elif choose == "2":
         cls()
         os.system('powershell -Command "Get-Childitem -path $Directory -Recurse -Include *.jar')
-        print("")
-        print("")
+        print("\n")
         os.system("timeout -1 >nul 2>&1")
         scanner()
 
@@ -114,8 +92,7 @@ def scanner():
         menu()
 
     else:
-        print("")
-        print("Please make a valid selection.")
+        print("\nPlease make a valid selection.")
         os.system("timeout 2 >nul 2>&1")
         scanner()
 
@@ -124,20 +101,14 @@ def tools():
     cls()
     logo()
 
-    print("")
-    print("")
-    print("")
+    print("\n\n")
     print("                                              [ 1 ] Process Hacker 2")
     print("                                              [ 2 ] Luyten")
     print("                                              [ 3 ] Search Everything")
     print("                                              [ 4 ] UserAssistView")
     print("                                              [ 5 ] Last Activity Viewer")
-    print("")
-    print("")
-    print("")
-    print("")
-    print("                                                        [ x ]")
-    print("")
+    print("\n\n\n")
+    print("                                                        [ x ]\n")
 
     choose = input(">> ").lower()
     if not choose:
@@ -167,8 +138,7 @@ def tools():
         menu()
 
     else:
-        print("")
-        print("Please make a valid selection.")
+        print("\nPlease make a valid selection.")
         os.system("timeout 2 >nul 2>&1")
         tools()
 
@@ -177,20 +147,13 @@ def info():
     cls()
     logo()
 
-    print("")
-    print("")
-    print("")
-    print("                                              _________________________")
-    print("")
+    print("\n\n")
+    print("                                              _________________________\n")
     os.system("echo                                                  Windows ^> %OS%")
     os.system("echo                                                  Hostname ^> %username%")
     os.system("echo                                                  Nickname ^> %s" %nickname)
     os.system("echo                                                  HWID ^> %s" %hwid)
-    print("                                              _________________________")
-    print("")
-    print("")
-    print("")
-    print("")
+    print("                                              _________________________\n\n\n\n")
 
     os.system("timeout -1 >nul 2>&1")
     menu()
@@ -200,20 +163,9 @@ def cc():
     cls()
     logo()
 
-    print("")
-    print("")
-    print("")
+    print("\n\n")
     print("                                              Copyright (C) 2020 Helix.")
-    print("                                                 All Rights Reserved.")
-    print("")
-    print("")
-    print("")
-    print("")
-    print("")
-    print("")
-    print("")
-    print("")
-    print("")
+    print("                                                 All Rights Reserved.\n\n\n\n\n\n\n\n\n")
 
     os.system("timeout -1 >nul 2>&1")
     menu()
@@ -223,20 +175,12 @@ def creds():
     cls()
     logo()
 
-    print("")
-    print("")
-    print("")
+    print("\n\n")
     print("                                              Made by splars#1252 with <3")
-    print("                                                    Credits to Mvk#0349")
-    print("")
+    print("                                                    Credits to Mvk#0349\n")
     print("                                              https://www.youtube.com/splars")
     print("                                              https://namemc.com/profile/Splars")
-    print("                                              https://github.com/splarsxd")
-    print("")
-    print("")
-    print("")
-    print("")
-    print("")
+    print("                                              https://github.com/splarsxd\n\n\n\n\n")
 
     os.system("timeout -1 >nul 2>&1")
     menu()
