@@ -70,25 +70,25 @@ def scanner():
     print("\n\n\n\n\n\n")
     print("                                                        [ x ]\n")
 
-    choose = input(">> ").lower()
-    if not choose:
+    choice = input(">> ").lower()
+    if not choice:
         scanner()
 
-    if choose == "1":
+    if choice == "1":
         cls()
         os.system('powershell -Command "Get-Childitem -path $Directory -Recurse -Include *.exe')
         print("\n")
         os.system("timeout -1 >nul 2>&1")
         scanner()
 
-    elif choose == "2":
+    elif choice == "2":
         cls()
         os.system('powershell -Command "Get-Childitem -path $Directory -Recurse -Include *.jar')
         print("\n")
         os.system("timeout -1 >nul 2>&1")
         scanner()
 
-    elif choose == "x":
+    elif choice == "x":
         menu()
 
     else:
@@ -110,31 +110,31 @@ def tools():
     print("\n\n\n")
     print("                                                        [ x ]\n")
 
-    choose = input(">> ").lower()
-    if not choose:
+    choice = input(">> ").lower()
+    if not choice:
         tools()
 
-    if choose == "1":
+    if choice == "1":
         os.system("start https://processhacker.sourceforge.io/downloads.php")
         tools()
 
-    elif choose == "2":
+    elif choice == "2":
         os.system("start https://github.com/deathmarine/Luyten/releases/tag/v0.5.4_Rebuilt_with_Latest_depenencies")
         tools()
 
-    elif choose == "3":
+    elif choice == "3":
         os.system("start https://www.voidtools.com")
         tools()
 
-    elif choose == "4":
+    elif choice == "4":
         os.system("start https://www.nirsoft.net/utils/userassist_view.html")
         tools()
 
-    elif choose == "5":
+    elif choice == "5":
         os.system("start https://www.nirsoft.net/utils/computer_activity_view.html")
         tools()
 
-    elif choose == "x":
+    elif choice == "x":
         menu()
 
     else:
